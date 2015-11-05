@@ -224,7 +224,7 @@
 <h5 id="为何要勾画这个数据生态信息系统？">为何要勾画这个数据生态信息系统？</h5><p>我花了大量时间与数据专家交流，了解他们的工作流程、难点及解决方案。数据科学工具成千上万，这个生态系统表当然无法将其一一罗列，不过最常见的软件、公司及推动这些工具发展的开源程序都已包含其中。<br>数据专家不能只生活在<a href="http://www.r-project.org/" target="_blank" rel="external">R语言</a>或<a href="http:products.office.com/en-us/excel" target="_blank" rel="external">Excel表格</a>里。他们需要工具来获得质量拔尖且可用于预测分析的数据。其实我觉得这正是统计学家和数据专家的区别所在。在我看来，统计学家使用数据进行回归分析。而数据专家需要切实获取数据、进行回归分析、沟通结果、展示模式，并超越所在机构当时的局限，立足于制高点带领大家寻求切实可行的突破发展。鉴于他们需要统筹整个数据通道，我希望这个数据生态系统可以罗列出数据专家门常用的重要工具和使用方法，以及工具之间的交互联系。</p>
 <p>现在干货来了！</p>
 <h1 id="第一部分：数据源">第一部分：数据源</h1><p>数据是整个数据生态系统的源头。总的来说，数据源可分为数据库、应用和第三方数据三类。</p>
-<h4 id="数据库">数据库</h4><center><br>  <img src="/images/DSE_db.jpg" width="250"><br></center>
+<h4 id="数据库">数据库</h4><center><br>  <img src="/images/DSE_db.jpg"><br></center>
 
 <p>结构化数据库早于非结构化数据库出现。结构化数据库每年有约250亿美元的市场，你可以在数据生态系统图里看到众所周知的<a href="http://www.oracle.com/index.html" target="_blank" rel="external">Oracle</a>，和一些新创公司譬如<a href="http://memsql.com" target="_blank" rel="external">MemSQL</a>等。结构化数据库储存有限的数据列，一般由结构化查询语言(SQL)运行，用于数据可靠完善至关重要的领域，比如说财政和运营。</p>
 <p>对结构化数据库有一个重要假设，那就是查询数据时必须能得到一致且完善的结果。想一想谁绝对需要这样一种结构化数据库？对了，就是你的银行。它们存储账户信息、个人姓名、借款等等，必须随时分毫不差地知道你账户中的金额。</p>
@@ -234,7 +234,7 @@
 <p>从强大的推荐引擎，到世界级的翻译系统，到令人难以置信的存货管理，都建立于这些数据之上。非结构化数据库一般来说没有结构化数据库那么精确，但对于许多应用（尤其是数据科学界），这个折衷是值得的。举例来说，比如你的非结构化数据库在100个机器上运行，但是其中有一个当机了。这时你仅用99台机器（而非100台）来决定向用户推荐观看一部特定的电影，也完全可行。这种类型的数据库看重灵活性，量化以及速度，哪怕不能随时保证完全精确。</p>
 <p>还有一个更有名的例子。一个软件公司创建了一个基于Hadoop的非结构化数据库软件<a href="http://www.cloudera.com/content/cloudera/en/home.html" target="_blank" rel="external">Cloudera</a>。来看看它有多大的成长空间吧：7年前，我接到风投的电话，他们预期Cloudera在全球有10到15家公司的市场，去年Cloudera已获得了将近10亿美元的融资。</p>
 <p>随着数据专家取代财务和会计，成为最主要的数据消费者，数据库将会越来越走进每一个人的生活 。</p>
-<h4 id="商业应用">商业应用</h4><center><br>  <img src="/images/DSE_app.jpg" width="250"><br></center>
+<h4 id="商业应用">商业应用</h4><center><br>  <img src="/images/DSE_app.jpg"><br></center>
 
 
 <p>十年前，没有人想过能把重要的商业数据存在云端，如见这却早已成为了现实。这也许是商业的IT基础结构的最大转变之处。</p>
@@ -242,7 +242,7 @@
 <p>销售数据不再存在于用户自己安装的内部数据库，而是被放在云端，由致力于保证数据可用且稳定的云端公司提供服务。其他公司也纷纷效仿这种做法。如今基本上每个商业部门都有一个对应的数据应用。<a href="http://marketo.com/" target="_blank" rel="external">Marketo</a>存储营销数据，<a href="http://mailchimp.com/" target="_blank" rel="external">MailChimp</a>存储电子邮件，<a href="https://www.optimizely.com/" target="_blank" rel="external">Optimizely</a>存储A/B测试数据，<a href="https://www.zendesk.com/" target="_blank" rel="external">Zendesk</a>存储顾客满意度，诸如此类。</p>
 <p>为什么这是相关的呢？如今每个商业部门都有强大的数据库，由数据专家分析并用于预测分析。数据量很大，却零散地分布在多个应用之中。比如说你在<a href="http://www.sugarcrm.com/" target="_blank" rel="external">SugarCRM</a> 中查看某个消费者的信息，但是当你想知道这名顾客的服务记录时，需要去ZenDesk中查看。而如果你想要知道他是否支付了最近的账单，则要去查<a href="https://www.xero.com/us/" target="_blank" rel="external">Xero</a>。所有的数据都被存放在不同的地点，网站和数据库中。</p>
 <p>商业数据被转移到了云端，可以存放更多的数据了，但是这些数据被零散地存放在全世界的不同服务器的不同应用里。</p>
-<h4 id="第三方数据">第三方数据</h4><center><br>  <img src="/images/DSE_3rd_party.jpg" width="250"><br></center>
+<h4 id="第三方数据">第三方数据</h4><center><br>  <img src="/images/DSE_3rd_party.jpg"><br></center>
 
 <p>第三方数据出现得比结构化和非结构化数据库都早得多。<a href="http://www.dnb.com/" target="_blank" rel="external">Dun &amp; Bradstreet</a>从1841年就开始卖数据了。随着数据对每个机构都愈发重要，这个领域也将会获得长足的发展。</p>
 <p>在数据库生态系统图中，我大体把第三方数据分成四个领域，分别是商业信息数据，社交媒体数据，网页爬虫和公开数据。</p>
