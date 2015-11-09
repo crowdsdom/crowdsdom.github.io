@@ -1,0 +1,717 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="Crowdflower,大数据," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="本文接续一张图搞懂美国大数据产业（上），为Crowdflower首席执行官 Lukas BieWald 访谈多位美国数据科学家整理后发表于Crowdflower的博客，为帮助大家更了解美国大数据产业的发展现况，经作者同意后翻译并转载。
+第二部分：数据处理最近，福特汽车的数据专家迈克尔·卡瓦雷塔在纽约时报上提到了数据专家在日常工作中面临的挑战。卡瓦雷特说：“我们真的需要更好的工具来减少处理数据的时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一张图搞懂美国大数据产业（下）">
+<meta property="og:url" content="http://crowdsdom.github.io/2015/11/09/一张图搞懂美国大数据产业（下）/index.html">
+<meta property="og:site_name" content="集智数据">
+<meta property="og:description" content="本文接续一张图搞懂美国大数据产业（上），为Crowdflower首席执行官 Lukas BieWald 访谈多位美国数据科学家整理后发表于Crowdflower的博客，为帮助大家更了解美国大数据产业的发展现况，经作者同意后翻译并转载。
+第二部分：数据处理最近，福特汽车的数据专家迈克尔·卡瓦雷塔在纽约时报上提到了数据专家在日常工作中面临的挑战。卡瓦雷特说：“我们真的需要更好的工具来减少处理数据的时间">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_chinese.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_enrichment.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_ETL.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_integration.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_API.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_insight.jpg">
+<meta property="og:image" content="http://crowdsdom.github.io/images/DSE_model.jpg">
+<meta property="og:updated_time" content="2015-11-09T01:56:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一张图搞懂美国大数据产业（下）">
+<meta name="twitter:description" content="本文接续一张图搞懂美国大数据产业（上），为Crowdflower首席执行官 Lukas BieWald 访谈多位美国数据科学家整理后发表于Crowdflower的博客，为帮助大家更了解美国大数据产业的发展现况，经作者同意后翻译并转载。
+第二部分：数据处理最近，福特汽车的数据专家迈克尔·卡瓦雷塔在纽约时报上提到了数据专家在日常工作中面临的挑战。卡瓦雷特说：“我们真的需要更好的工具来减少处理数据的时间">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+  <title> 一张图搞懂美国大数据产业（下） | 集智数据 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-65157776-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="http://crowdsdom.com/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">集智数据</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              一张图搞懂美国大数据产业（下）
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-09T08:52:53+08:00" content="2015-11-09">
+            2015-11-09
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/产业/" itemprop="url" rel="index">
+                  <span itemprop="name">产业</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/09/一张图搞懂美国大数据产业（下）/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/一张图搞懂美国大数据产业（下）/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><center><br>  <img src="/images/DSE_chinese.jpg"><br></center>
+
+<p>本文接续<a href="http://blog.crowdsdom.com/2015/09/05/%E4%B8%80%E5%BC%A0%E5%9B%BE%E6%90%9E%E6%87%82%E7%BE%8E%E5%9B%BD%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BA%A7%E4%B8%9A%EF%BC%88%E4%B8%8A%EF%BC%89/" target="_blank" rel="external">一张图搞懂美国大数据产业（上）</a>，为Crowdflower首席执行官 Lukas BieWald 访谈多位美国数据科学家整理后发表于Crowdflower的<a href="http://www.crowdflower.com/blog/the-data-science-ecosystem" target="_blank" rel="external">博客</a>，为帮助大家更了解美国大数据产业的发展现况，经作者同意后翻译并转载。</p>
+<h1 id="第二部分：数据处理">第二部分：数据处理</h1><p>最近，福特汽车的数据专家迈克尔·卡瓦雷塔在纽约时报上提到了数据专家在日常工作中面临的<a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0" target="_blank" rel="external">挑战</a>。卡瓦雷特说：“我们真的需要更好的工具来减少处理数据的时间，来到达‘诱人的部分’。”数据处理包括清洗数据、连接数据并把数据转化成可用的格式；“诱人的部分”则是数据预测分析和建模。前者有时被称作是“看门的工作”，可见前后两者哪个处理起来更有乐趣了。</p>
+<p>在我们最近的<a href="http://www.crowdflower.com/blog/the-data-behind-todays-data-scientists" target="_blank" rel="external">调查</a>中，我们发现数据专家需要实打实地花费80%的时间来处理数据。数据专家的工资如此之高，可进行数据处理的公司还那么少，实在令人惊讶。</p>
+<p>在上一部分中，我提到结构化数据库起源于财务或经营要求，而非结构化数据库则是被数据专家推动发展的。数据领域的发展过程也是如此。结构化数据库是一个很成熟的行业了，有足够的工具形成金字塔供财务和经营人员使用。然而对于需求更加灵活的非结构化数据库，则需要一套新的工具供数据专家使用。</p>
+<p>先从我熟悉的领域说起吧。</p>
+<h4 id="数据强化">数据强化</h4><center><br>  <img src="/images/DSE_enrichment.jpg"><br></center>
+
+<p>数据强化是对原始数据的提升。最初的数据来源可能很混乱，格式不同，出处不同（如此之类），很难甚至完全无法对其进行预测分析。数据强化对数据进行清洗，大大减少了数据专家在这一部分花费的时间。</p>
+<p>我把数据强化分为“人工的”和“自动的”两类，但实际上两者都需要人和机器的参与。人工数据强化是把所有的原始数据都用人工转化，不过这需要大量的电脑自动化来保证其可靠。同理，自动数据强化通过许多规则和脚本来转化数据，但是需要人工来设立和检查这些规则。</p>
+<p>人工数据强化的基础在于，有些任务确实人做起来比机器更简单。比如图片识别吧，人类可以轻易看出一个卫星图片是否含有云状物，可机器识别起来却十分困难。</p>
+<p>语言则是另外一个人工数据强化派上用场的地方。自然语言处理的算法可以做很牛的事情了，不过仍然没有办法像人那样区别挖苦讽刺或粗话。所以你会看到PR公司和营销人员都会人工来分析这些情感。</p>
+<p>人工数据强化还可以用来训练搜索算法，而且人能比机器更好地阅读和收集完全不能比较的信息。再次强调，这需要任务被设立好，软件能做很好的质量控制。但是如果能有数以千计的人，协力一起来做人比机器能完成得更好的简单任务，你就能以极快的速度来完成数据强化。 <a href="http://www.crowdflower.com/" target="_blank" rel="external">CrowdFlower</a>和<a href="https://www.workfusion.com/" target="_blank" rel="external">WorkFusion</a>，以及部分<a href="https://www.mturk.com/mturk/welcome" target="_blank" rel="external">Amazon Mechanical Turk</a>都在做这部分的工作。</p>
+<p>自动数据强化和人工数据强化的目标相同，但是是由机器（而不是人工）通过脚本来把原始数据转换成可用数据。正如上文提到的，你还是需要一个厉害的数据专家来输入那些信息，并在转化完成后检查。如果数据格式统一，自动数据强化还是很强大的。只要有好的脚本，含有少量错误和不完全连贯的数据几乎能立即转换成可用数据。</p>
+<p>自动数据强化甚至能够有效地清洗数据，只要这个过程不需要人参与。从规定姓名和日期格式等简单任务，到从网络上有效抓取元数据等复杂任务，都是自动数据强化的典型例子。<a href="http://www.trifacta.com/" target="_blank" rel="external">Trifacta</a>、<a href="http://www.tamr.com/" target="_blank" rel="external">Tamr</a>、<a href="http://www.paxata.com/" target="_blank" rel="external">Paxata</a>和<a href="http://www.pentaho.com/" target="_blank" rel="external">Pantaho</a> 等都提供了很好的自动化解决方案。公司们都希望能够把一些宝贵的时间还给他们的数据科学家，因此自动数据强化也是正在快速发展。</p>
+<h4 id="ETL/混合">ETL/混合</h4><center><br>  <img src="/images/DSE_ETL.jpg"><br></center>
+
+<p>ETL表示提取 (Extract)，转换（Transform) 和加载 (Load)，显现了这一部分的数据生态系统的核心。本质上，ETL/混合解决方案是帮助数据专家匹配不相似的数据，以做分析之用。</p>
+<p>举个例子，比如说你有一个财务数据库，包含了你的消费者、支付金额和购物种类明细，并被储存在一个地方。而你同时还有另一个数据库包含了消费者地址。ETL/混合领域的工具帮助顾客把它们合并成一个单一且可用的数据库，由此数据专家便可以探索一些新的方面，比如某个特定商品在哪个地区消费最多，或者哪个地方会是你的目标市场，等等。</p>
+<p>以上只是一些简单的例子；实际情况可能复杂得多。不过基本上每个数据专家的日常工作中都包含了数据混合。通常数据来源不同，格式也会不同。如果需要一览全面信息，混合整理这些数据源是必不可少的。</p>
+<p><a href="http://www.alteryx.com/" target="_blank" rel="external">Alteryx</a>、<a href="http://www.astera.com/" target="_blank" rel="external">Astera</a>、<a href="http://www.cloveretl.com/" target="_blank" rel="external">CloverETL</a> 和<a href="http://etleap.com/" target="_blank" rel="external">etleap</a> 都开发了可以混合这类数据的软件。而ETL虽然早在结构化数据库出现之时便有了，但由于越多数据源也意味着更多的格式不一，ETL的重要性现在越发显现出来。无论何种数据分析，大数据的前景都依赖于全局与细节分析的全面结合。</p>
+<h4 id="数据整合">数据整合</h4><center><br>  <img src="/images/DSE_integration.jpg"><br></center>
+
+<p>数据整合与ETL/混合有不少重合之处，它们都是要对数据进行整合。不过数据整合更多是按照应用的需要把数据统一成某个特定格式（而不是进行一般的混合）。</p>
+<p>回想一下我在上一部分提到的第三方数据云应用，是如何全面覆盖销售和营销数据，以及社会研究和邮件管理的。怎么才能把这些应用都合并到一个可用的数据集，让数据专家可以据此做预测分析呢？<a href="http://www.clearstorydata.com/" target="_blank" rel="external">ClearStory</a>、<a href="https://databricks.com/" target="_blank" rel="external">Databricks</a> 和<a href="http://www.snaplogic.com/" target="_blank" rel="external">SnapLogic</a> 等软件便可助你实现。</p>
+<p><a href="https://www.informatica.com/" target="_blank" rel="external">Informatica</a> 已经从事数据整合多年，并获得了超过十亿美元的收入。我虽把它放在了数据整合的部分，但它其实对数据处理的各个领域都有所涉及。微软也提供了两项数据整合服务：<a href="http://azure.microsoft.com/en-us/services/data-factory/" target="_blank" rel="external">Azure数据工厂</a> 和<a href="https://technet.microsoft.com/en-us/library/ms141026.aspx" target="_blank" rel="external">SQL服务器整合服务</a>。</p>
+<p>类似于ETL/混合工具，数据整合项目主要是混合数据生态系统图左边的数据，使其可以通过图中右边的软件建模。也就是说，数据整合工具（如<a href="http://www.apatar.com/" target="_blank" rel="external">Apatar</a> 或 <a href="http://www.zoomdata.com/" target="_blank" rel="external">Zoomdata</a>），可匹配来自云应用（如<a href="https://hootsuite.com/" target="_blank" rel="external">Hootsuite</a> 或<a href="http://www.gainsight.com/" target="_blank" rel="external">Gainsight</a>）的数据，让你通过<a href="http://www.domo.com/" target="_blank" rel="external">Domo</a> 或<a href="https://chartio.com/" target="_blank" rel="external">Chartio</a> 获得商业智能（BI）。</p>
+<h4 id="应用程序界面(API)接口">应用程序界面(API)接口</h4><center><br>  <img src="/images/DSE_API.jpg"><br></center>
+
+<p>最后，我们谈谈API接口。这些公司不那么着重于数据转化，而是更强调独立的API之间的整合。这类公司一旦兴起，实在是前途无量。</p>
+<p>这些工具一旦用对了地方，是很好很强大的。从一个没什么技术含量的例子说起吧，<a href="https://ifttt.com" target="_blank" rel="external">IFTTT</a> 应该能帮大家理解API接口是怎么一回事。IFTTT 表示“如果这样，则那样”（“if this, then that”），人们通过它，可以把发到Instagram的图片马上保存到Dropbox或发上Twitter。IFTTT就是一个非数据的专家在协调在线工作时使用的API接口。我把这个例子包含进来，是因为许多数据专家也会在私底下或工作中稍微使用到它。</p>
+<p><a href="https://zapier.com/" target="_blank" rel="external">Zapier</a> 和IFTTT类似，不过着重于商业应用，所以也更受数据专家欢迎。</p>
+<p><a href="https://www.mulesoft.com/" target="_blank" rel="external">MuleSoft</a> 则是一个能把所有商业应用都连接起来的接口。比如说一个用户登录你的网页，谁需要知道这个信息？你的销售团队需要这个信号吧？你的运营团队需要知道那个用户什么时候再次登录吧？营销部门需要知道他们的邮件营销活动的成果吧？一个简单的API接口就可以同时触发这些通知了。</p>
+<p>最后，<a href="http://segment.com/" target="_blank" rel="external">Segment.io</a> 能把你的产品连接到许多这个生态系统图左边的SaaS商业应用及其他应用。</p>
+<p>API接口的存在，正是因为数据专家要使用数据生态系统中的那么多工具来混合和整合数据，可是这些工具又不是全部为数据专家设计的。</p>
+<h4 id="开源工具">开源工具</h4><p>用于数据处理的开源工具，远比用于数据存储和数据分析的少。Google开源了他们非常有意思的open-refine项目。多数时候，公司会在Python上建立他们自己的专属工具；而<a href="http://community.pentaho.com/projects/data-integration/" target="_blank" rel="external">Kettle</a> 作为一个开源的ETL工具，用户也越来越多。</p>
+<h1 id="第三部分：数据应用">第三部分：数据应用</h1><p>还记得我在第二部分开头的<a href="#第二部分：数据处理">引用</a>吗？ 关于数据专家想要更好的数据处理工具，让它们可以直接处理“诱人的部分”那句话。好的，在介绍了数据存储方式，数据清洗和整合，我们终于来到这一步了。数据应用正是这个“诱人的部分”，包括预测分析、数据挖掘和机器学习等等。到了这个步骤，我们将会用上这些所有的数据，做出惊人的东西来。</p>
+<p>大体上，我把这一列拆分成两个分支：数据洞悉和建模。数据洞悉是你从数据里得到些东西；而建模则是你通过数据建立些东西。数据专家用它们来解释过去和预测未来。</p>
+<p>我们先从数据洞悉谈起。</p>
+<h4 id="数据洞悉">数据洞悉</h4><center><br>  <img src="/images/DSE_insight.jpg"><br></center>
+
+<p>我把这些工具分成四类，分别是统计工具、商业智能、数据挖掘和数据合作。前两类里，很多成熟的大型工具已经被使用了数十年了。数据挖掘和数据合作虽然不是新鲜出炉，不过市场还不够成熟，我预计将会随着越来越多的机构重视数据而急剧增长。</p>
+<p>统计工具用于专门的分析，数据专家可用它们来做回归分析，并把数据视觉化成一个人们更容易消化的模式。提到统计工具就不能不提微软的Excel了，数据专家、分析师以及使用电脑的每一个人都在用它。虽然有明显缺陷，但是Excel还是数据专家最好、最原始和最强有力的工具之一，他们用Excel做了很多厉害的事情。事实上，CrowdFlower的最新<a href="http://www.crowdflower.com/blog/the-data-behind-todays-data-scientists" target="_blank" rel="external">数据科学工具调查</a>中我们发现，Excel仍是数据专家们使用最多的工具。</p>
+<p>除了顶梁柱Excel，还有很多其他统计工具。<a href="http://www.r-project.org/" target="_blank" rel="external">R语言</a> 就是一个很受欢迎的数据分析工具，里面还包含了一个巨大的开源统计包。<a href="http://www.tableau.com/" target="_blank" rel="external">Tableau</a> 则是一个很好的数据视觉化程序，被商务、学术和媒体人士广泛使用。Mathworks公司的<a href="http://www.mathworks.com/products/matlab/" target="_blank" rel="external">Matlab</a>是一个自有的工程平台，用户不仅能用它创建图表，还能建立和优化算法。<a href="http://www-01.ibm.com/software/analytics/spss/" target="_blank" rel="external">SPSS</a> 和<a href="http://www.stata.com/" target="_blank" rel="external">Stata</a> 都已存在了几十年，被用于大批量数据的复杂分析。</p>
+<p>商业智能本质上是用于创建干净的互动界面系统报表（Dashboard）和提取指标的统计工具。它们把复杂的数据翻译成易读易懂的形式，那你公司里的非技术人士也能看明白了。互动界面系统报表（Dashboard）能把重要的数据浮上来，非数据的专家也能基于自己的经验使用这些数据。Gartner把这个定位为一个<a href="http://www.gartner.com/newsroom/id/2723717" target="_blank" rel="external">140亿美元的市场</a>，老牌大牛 SAP，Oracle和IBM是商业智能领域最大的公司。<a href="http://www.domo.com/" target="_blank" rel="external">Domo</a> 和<a href="http://chartio.com/" target="_blank" rel="external">Chartio</a>把各种形式的数据源连接起来，创建出了各种好用、有人气的互动界面系统报表（Dashboard）。数据专家可以用这些工具来向他们机构的利益相关者展示机构的经营情况。</p>
+<p>商业智能着重于把数据提取成易读易懂的互动界面系统报表（Dashboard）；数据挖掘和探索则用于洞悉大型的数据，也更是上文数据专家所指的“诱人的部分”。这些公司不仅要展示数据，更要在数据的基础上建立一些可行的东西。</p>
+<p>和我在第一部分中写到的第三方应用不同，这些商业智能工具通常末端是很开放的，可以被用于很多不同的机构，从政府到金融到商业皆可。比如说，用<a href="http://www.palantir.com/" target="_blank" rel="external">Palantir</a> 来建立解决方案，从企业网络安全，到施法数据库同步，到疾病反应，无一不可。这些工具可以用来整合和分析数据，而且通常一旦由数据专家设置好后，机构里地任何一个人都可以像一个微数据专家一样使用这些工具，输入剖析数据并寻找趋势，促使其部门获得成功。<a href="http://www.platfora.com/" target="_blank" rel="external">Platfora</a> 是商业智能的一个很好地例子，还有很多其他将会雨后春笋般涌现。</p>
+<p>数据洞悉的最后一部分是数据合作。当公司的数据科学团队越来越大，数据合作也将可能变得愈发重要。如果开放数据在今后成为新的开源（<a href="http://www.computerworld.com/article/2896720/we-need-open-data-to-become-the-new-open-source.html" target="_blank" rel="external">我认为这是必然的</a>），<a href="https://modeanalytics.com/" target="_blank" rel="external">Mode Anaytics</a> 等工具将会变得更加重要。数据专家可以通过Mode把它们基于SQL的分析分享和报告给他们机构内外的任何一人。<a href="https://www.silk.co/" target="_blank" rel="external">Silk</a> 是一个强大的视觉化工具，用户可以用它来上传数据和创建一系列可过滤的图表、地图和表格。<a href="http://www.rstudio.com/" target="_blank" rel="external">R studio</a> 给数据专家提供了很多制作专业小应用的工具，这些小应用能在团队内部分享，帮助非数据型的专家调查数据。有那么多辅助数据合作的公司涌现，可见数据科学不是正在发展，而是几乎已经无处不在了。</p>
+<p>再强调一下，这里是没有什么硬性的划分的。很多这些工具也被非数据型的专家使用，用来创建dashboards或辅助实现可视化。但这些工具都是基于获取数据，并从数据那里得到些东西。而我们的下一个章节“建模”，就有点不同了，是讲关于“建立”的。</p>
+<h4 id="建模">建模</h4><center><br>  <img src="/images/DSE_model.jpg"><br></center>
+
+<p>我要大声呐喊着进入这个章节。其中最鼓舞人心的项目是Shivon Zills 超牛的<a href="https://medium.com/@shivon/the-current-state-of-machine-intelligence-f76c20db2fe1" target="_blank" rel="external">机器智能一览图</a>，我提到它是由于建模和机器学习是有很多交集的。Shivon这个制图及分析异乎寻常的深刻，很值得有兴趣的读者一读。</p>
+<p>建模是关于预测和学习的。换言之，就是获取数据集，并预测接下来会发生什么；或者通过已标注的数据训练一套算法，用来标注更多的数据。</p>
+<p>预测分析型的建模更着重于回归分析。这些工具不仅简单地回归数据、合并或清洗数据，更重要的是根据历史数据和趋势，对未来做出高精度的预测。比如说，可能有一个巨大的数据集，能把人的信用评分和众多的人口统计学细节匹配起来。你就可以通过预测分析，根据某个申请人和你模型中的人口统计学信息异同，来评断他的信用值。从政治选举主管决定何时何地进行拉票，到能源公司根据当地能源使用的峰值与低值作出计划，各个方面无不需要预测分析。</p>
+<p>现在已经有很多公司提供预测分析的工具了，还有一大波正在袭来。<a href="http://www.rapidinsightinc.com/" target="_blank" rel="external">Rapid Insights</a> 帮助它的顾客通过回归分析洞悉数据集。Skytree主要用来分析非常大的数据集。<a href="http://numenta.com/" target="_blank" rel="external">Numenta</a> 等公司在创造能持续学习、且能在运行数据时捕捉到重要可行的模式的机器。不过基本上，它们都是用来获取数据、分析并通过这些信息来精彩地预测事件的。</p>
+<p>深度学习则更像一项技术，而不是解决方案。深度学习现在大热，因其能提供精确得多的模型，尤其是在有大量数据用来训练的时候。深度学习似乎对图像最为有用，因此许多做深度学习的公司都是从图像起家的。事实上Facebook很早就在训练面部识别算法上取得了一定的成就（是就面部本身识别，而不是通过朋友圈的重叠和关系来猜测谁是谁）。<a href="https://www.metamind.io/" target="_blank" rel="external">Metamind</a> 提供了一个深度学习的小平台，每个人都可以用起来。<a href="https:// dato.com" target="_blank" rel="external">Dato</a> 包含了数据生态系统中的许多其他功能，比如ETL和可视化。</p>
+<p>自然语言处理工具（NLPs, Natural Language Process tools) 尝试建立算法来理解真实的话语。机器学习此处包括训练算法来识别文本的细微差别（而不仅是定位关键词），这意味着，可以识别俚语、讽刺、拼写错误、感情和所有真实演讲的一些奇怪的地方。要建立起这些工具，需要极其庞大的数据量，但是NLP有潜力减少许多用于文件处理、文字记录和情感分析的成本和时间。这些工具各自都有巨大的市场。</p>
+<p>可能流行文化里最出名的NLP实例就是Watson的Jeopardy!了。这其实是一个很非结构化的例子。想想Jeopardy!线索的叙述方式吧，双关语、俏皮话和各种精妙的表达无所不包。Jeopardy!能理解这些线索，水平还远超其竞争对手，真是令人惊叹。而那还是2011年的事了；NLP自那以后便开始飞速发展。<a href="http://www.attensity.com/" target="_blank" rel="external">Attensity</a> 等公司的NLP解决方案主要用于不同的产业领域；而<a href="http://www.maluuba.com/" target="_blank" rel="external">Maluuba</a> 等公司 则主要面对客户，实际上相当于语言理解方面的个人助理。<a href="http://idibon.com" target="_blank" rel="external">Ibibon</a> 主要针对非英语语种，虽然有时被忽视，但是这个市场其实很重要。我认为在接下来的十年左右，NLP会有很大的发展，这些工具将有机会给数以百计的产业带来变革。</p>
+<p>最后，简单介绍一下机器学习平台。上面提到的工具多用于管理服务，而机器学习平台却很不一样。Kaggle一类的工具，与其说是一个具体的产品，不如说是一个公司，把数据筛出来，让数据专家们竞相创造出最优算法（有点像我在第一部分提到的Netflix prize。微软的Azure ML和Google的Prediction API都属于这类工具，因为它们都和Kaggle一样，能处理一系列的数据问题，而不仅限于某些特定领域。Google的Prediction API提供一个黑盒子尝试给输入的数据建模；而微软的Azure ML则给数据专家们提供一个工具箱来整合数据块，并建立机器学习的工作流程。</p>
+<h4 id="开源工具-1">开源工具</h4><p>也许是因为这个开源工具目前有最多前沿研究，开源建模和洞悉工具都非常多。<a href="http://www.r-project.org/" target="_blank" rel="external">R</a> 既是编程语言，又是一个数据探索的交互环境，是很多数据专家的一个基本工具。<a href="http://www.r-project.org/" target="_blank" rel="external">Octave</a> 是一个Matlab的一个免费开源端口，非常好用。<a href="http://julialang.org/" target="_blank" rel="external">Julia</a> 在技术计算中的应用日益广泛。斯坦福有一个<a href="http://nlp.standford.edu/software/" target="_blank" rel="external">NLP 开源库</a> , 包含了大多数标准语言处理工具。<a href="http://scikit-learn.org/stable/" target="_blank" rel="external">Scikit</a> 是一个用于Python的机器学习包，拥有大多数标准建模和机器学习的算法，已经越来越有影响力。</p>
+<p>总的来说，数据应用工具使得数据专家对各种机构来说愈发重要。正是通过这些工具，数据专家可以提出强有力的建议、揭露隐藏的趋势并提供切实的价值。当然了，这些工具能派上用场的前提是要有好的数据，以及之前的数据强化、混合和清晰过程。</p>
+<p>因此，我选择把这些工具称作是一个生态系统，而不仅仅是一个图景。数据来源和数据处理是数据洞悉和建模的前提。我们宁愿用很好的数据做平庸的分析，而不是用平庸的数据做很好的分析。当然啦，运用得当的话，数据专家是可以用很好的数据做很好的分析的，这时数据专家的价值就无与伦比了。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Crowdflower/" rel="tag">#Crowdflower</a>
+          
+            <a href="/tags/大数据/" rel="tag">#大数据</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/05/集智数据产品发布报告-第一期/" rel="next">集智数据产品发布报告-第一期</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/11/09/一张图搞懂美国大数据产业（下）/"
+     data-title="一张图搞懂美国大数据产业（下）"
+     data-content=""
+     data-url="http://crowdsdom.github.io/2015/11/09/一张图搞懂美国大数据产业（下）/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/11/09/一张图搞懂美国大数据产业（下）/"
+                   data-title="一张图搞懂美国大数据产业（下）" data-url="http://crowdsdom.github.io/2015/11/09/一张图搞懂美国大数据产业（下）/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.png" alt="集智数据" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">集智数据</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第二部分：数据处理"><span class="nav-number">1.</span> <span class="nav-text">第二部分：数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据强化"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">数据强化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ETL/混合"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">ETL/混合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据整合"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">数据整合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用程序界面(API)接口"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">应用程序界面(API)接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开源工具"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">开源工具</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三部分：数据应用"><span class="nav-number">2.</span> <span class="nav-text">第三部分：数据应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据洞悉"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">数据洞悉</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建模"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">建模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开源工具-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">开源工具</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">集智数据</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jizhi-data"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
